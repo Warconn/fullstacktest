@@ -8,6 +8,7 @@ import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatToolbarModule } from '@angular/material';
+import { IssueService } from './issue.service';
 
 const routes: Routes = [
   { path: 'create', component: CreateComponent },
@@ -29,7 +30,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatToolbarModule
   ],
-  providers: [],
+  providers: [IssueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
